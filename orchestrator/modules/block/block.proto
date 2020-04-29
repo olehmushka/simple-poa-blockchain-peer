@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = ".;block";
+
+package block;
+
+service BlockService {
+  rpc Add (Block) returns (Empty) {}
+  rpc Get (GetBlockRequest) returns (Block) {}
+  rpc GetLast (Empty) returns (Block) {}
+}
+
+message Empty {}
+
+message Block {
+  int32 Index = 1;
+  string PrevBlockHash = 2;
+  int32 Timestamp = 3;
+  string Data = 4;
+  string Hash = 5;
+}
+
+message GetBlockRequest {
+  string Hash = 1;
+}
