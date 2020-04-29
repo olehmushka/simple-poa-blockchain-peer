@@ -1,0 +1,7 @@
+Dockerfile*
+docker-compose*
+vendor
+.dockerignore
+.git
+.gitignore
+README.md

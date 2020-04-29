@@ -5,6 +5,7 @@ import (
 )
 
 type settingsKeys struct {
+	PeerHost string `name:"PEER_HOST" default:"0.0.0.0"`
   PeerPort string `name:"PEER_PORT"`
 }
 

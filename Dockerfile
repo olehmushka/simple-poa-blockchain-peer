@@ -8,7 +8,7 @@ COPY . /go/src/simple-poa-blockchain-peer/
 WORKDIR /go/src/simple-poa-blockchain-peer/
 
 RUN dep ensure && \
-    RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /go/src/simple-poa-blockchain-peer/main .
+    CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /go/src/simple-poa-blockchain-peer/main .
 
 EXPOSE 8080
 

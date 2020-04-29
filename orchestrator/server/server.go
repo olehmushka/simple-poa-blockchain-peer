@@ -25,7 +25,7 @@ func (s *Server) Run() {
 		s.Log.Error().Err(err).Msgf("Failed to listen %s port", s.port)
 	}
 	server := grpc.NewServer()
-	RegisterPeerServer(server, s.Log)
+	RegisterPeerServer(server)
 
   s.Log.Info().Msgf("Server is running on %s port...", s.port)
 	if err := server.Serve(lis); err != nil {
